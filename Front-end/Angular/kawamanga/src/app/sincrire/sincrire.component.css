@@ -1,0 +1,55 @@
+
+
+/* Le badground de mon site */
+div{
+    background: url(/assets/images/inscription.png) no-repeat;
+    position: absolute;
+    max-width: 220vh;
+    height: 100%;
+}
+/* Le formulaire  */
+form{
+    
+    width: 50vh;
+    margin: auto;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    opacity: 0.9;
+
+
+}
+h2{
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+input{
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 6px;
+    font-weight:bolder ;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px #fff solid;
+}
+button{
+    width: 70%;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgb(216, 5, 26);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    margin: 30px 10px 0px 10px;
+}

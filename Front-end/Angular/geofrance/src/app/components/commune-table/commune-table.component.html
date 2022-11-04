@@ -1,0 +1,37 @@
+<div *ngIf="communesIsLoading">
+    <fa-icon class="faSpinner" [icon]="faSpinner" [spin]="true"></fa-icon>
+</div>
+
+<ng-container *ngIf="communesIsLoaded">
+    <div>
+        <label for="search" class="form-label">Rechercher une commune</label>
+        <input type="text" class="form-control" name="search" placeholder="Alençon" [(ngModel)]="search" autocomplete="off" >
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Code</th>
+                <th scope="col">Code département</th>
+                <th scope="col">Code région</th>
+                <th scope="col">Codes Postaux</th>
+                <!-- Pour la creation de du click associé à la fonction GetPopulation pour le tri du tableau -->
+                <th scope="col" (click)="getPopulation()">Population </th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let commune of getCommunes()">
+                <td>{{ commune.nom }}</td>
+                <td>{{ commune.code }}</td>
+                <td>{{ commune.codeDepartement }}</td>
+                <td>{{ commune.codeRegion }}</td>
+                <td>{{ commune.codesPostaux }}</td>
+                <td>{{ commune.population }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <pagination [totalItems]="getLength()" [(ngModel)]="currentPage" [boundaryLinks]="true" [maxSize]="10"></pagination>
+</ng-container>
+

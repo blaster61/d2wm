@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(/mangaka.jpg) no-repeat center/cover;
+    font-family: "Arima", cursive;
+    color: #ffffff;
+    font-size: 15px;
+    
+}
+
+.container{
+
+    height: 95vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+form{
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
+input[type="text"]{
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input [type ="checkbox"]{
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.todo-btn, .todo-delete-all{
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.todo-delete-one{
+    
+    background-color: rgb(246, 249, 249);
+}
+button:hover{
+    color: #FFFFF0;
+    background-color: #f21616;
+    border: 2px solid #f21616;
+}
+li{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+
+    padding: 5px;
+    margin-bottom: 5px;
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer{
+    background: rgb(226, 9, 9) ;
+    text-align: center;
+   
+   
+  
+   
+}
+h1{
+    color: #ffffff;
+}
+

@@ -1,0 +1,50 @@
+/* Import de la police Merriweather  */
+@import url('https://fonts.googleapis.com/css2? family= Merriweather+Sans:ital@0;1 & display=swap');
+
+@font-face {
+    font-family: bakaritypo ;
+    src: url(/integration/assets/fonts/Parisienne-Regular.ttf);
+}
+
+
+
+
+/*pour changer la couleur de la police  */
+
+body{
+       
+    font-family: 'Merriweather',Georgia,serif;
+    
+}
+/* crée notre heater */
+h1{
+    font-size:  70px;
+    color:white}
+
+.nav ul li{
+    display: inline;
+    text-align: right;
+    list-style-type: none
+
+}
+
+.nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu{ text-align: right;
+    
+
+}
+  
+/* fin du header */
+/* container*/
+.container{
+    background: url("/integration/assets/image/hero.jpg");
+
+}
+
+
+
+

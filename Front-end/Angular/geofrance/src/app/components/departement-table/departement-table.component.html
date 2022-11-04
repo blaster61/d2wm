@@ -1,0 +1,42 @@
+<div *ngIf="departementsIsLoading">
+    <fa-icon class="faSpinner" [icon]="faSpinner" [spin]="true"></fa-icon>
+
+</div>
+
+<button *ngIf="!departementsIsLoaded" (click)="loadDepartements.emit()" class="btn btn-primary" type="action">
+   Charger les départements 
+</button>
+
+<div>
+    <label for="search" class="form-label">Rechercher un département</label>
+    <input type="text" class="form-control" name="search" placeholder="Orne" [(ngModel)]="search" autocomplete="off" >
+</div>
+
+
+<ng-container *ngIf="departementsIsLoaded">
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Code</th>
+            <th scope="col">Code région</th>
+            <th scope="col">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let departement of getDepartements()">
+            <td> {{ departement.nom }} </td>
+            <td> {{ departement.code}} </td>
+            <td> {{ departement.codeRegion }}</td>
+            <td (click)="loadCommunes.emit(departement.code)"><fa-icon class="faSearch" [icon]="faSearch"></fa-icon></td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<pagination [totalItems]="getLength()" [(ngModel)]="currentPage" nextText=">"></pagination>
+
+</ng-container>

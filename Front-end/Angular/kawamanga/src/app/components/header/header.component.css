@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px){
+
+img{
+    width: 13vh;
+}
+ul{
+    font-size: 17px;
+    font-weight: bold;
+}
+button{
+    margin: 95px;
+    padding-bottom: 10px;
+}
+input{
+    margin-left: 90px;
+    padding-bottom: 10px;
+}
+a{
+    margin-left: 55px;
+    font-family: 'Carter One', cursive;
+}
+nav {
+    box-shadow: 0 3px 10px 0;  
+}
+}

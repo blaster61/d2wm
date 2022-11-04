@@ -1,0 +1,92 @@
+
+
+
+
+body{
+    
+    background: rgb(236, 240, 240);
+    font-family: sans-serif;
+    color: black;
+}
+
+.contact{
+
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 50px;
+    background: white;
+    background-color: rgb(250, 215, 236);
+    background-color: aqua;
+    margin: 0 auto;
+    
+}
+h1{
+    text-align: center;
+    font-weight: normal;
+}
+
+
+form div{
+
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+label{
+    
+    margin-bottom: 5px;
+}
+
+input, textarea{
+    background: rgb(250, 240, 218);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 100%;
+
+}
+
+input{
+    height: 30px;
+    padding-left: 10px;
+    
+}
+
+button{
+
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: white;
+    color: green;
+    border-radius: 10px;
+}
+
+button:hover{
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+.btn{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.reset{
+    color:red;
+
+}
+
+.reset:hover{
+    background-color: red;
+    color: white;
+}
+
+input::placeholder{
+    color: black;
+    opacity: 20%;
+}

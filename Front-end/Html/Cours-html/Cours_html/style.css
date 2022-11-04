@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2? family= Merriweather+Sans:ital@0;1 & display=swap');
+
+
+body{
+       
+    font-family: 'Merriweather';
+    margin: 20px;
+    
+    background-color: brown;
+    
+}
+.nav-link{
+    text-decoration:solid;
+    color: white;
+
+
+}

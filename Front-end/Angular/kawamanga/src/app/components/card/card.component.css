@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Ewert&display=swap');
+/* le bloc de ma page */
+@media screen and (min-width: 768px){
+
+main{
+    background-color: black;
+}
+section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 25px;
+    row-gap: 5px;
+    height: 65vh;
+}
+/* les images des cartes */
+img{
+    height: 170px;
+    width: 20vh;
+    margin-bottom:10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0px 0px #ffffff;
+}
+/* les titre sous les cartes */
+span{
+    vertical-align: middle;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    display: grid;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Carter One', cursive;
+}
+/* le titre du site */
+h1{ 
+    font-family: 'Carter One', cursive;
+    color: rgb(220, 53, 69);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 55PX;
+    background: rgb(241, 230, 6); 
+    height: 12vh;
+    text-shadow: 3px 3px 1px  #f38406;
+    letter-spacing: 5px;
+    
+}
+
+/* span:hover {
+    transform: scale(1.2);
+    z-index: 2;
+} */
+img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+
+}
+}
+@media screen and (min-width:480px) and (max-width:768) {
+    
+main{
+    background-color: black;
+}
+section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 25px;
+    row-gap: 5px;
+    height: 65vh;
+}
+/* les images des cartes */
+img{
+    height: 170px;
+    width: 20vh;
+    margin-bottom:10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0px 0px #ffffff;
+}
+/* les titre sous les cartes */
+span{
+    vertical-align: middle;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    display: grid;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Carter One', cursive;
+}
+/* le titre du site */
+h1{ 
+    font-family: 'Carter One', cursive;
+    color: rgb(220, 53, 69);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 55PX;
+    background: rgb(241, 230, 6); 
+    height: 12vh;
+    text-shadow: 3px 3px 1px  #f38406;
+    letter-spacing: 5px;
+    
+}
+
+img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+}

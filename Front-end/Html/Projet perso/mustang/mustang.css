@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+/* DEBUT ACCUEIL */
+
+.container {
+    width: 100%;
+    height: 715px;
+    background-color: rgb(255, 30, 0);
+    font-size: 0;
+}
+
+.gauche {
+    width: 40%;
+    height: 100%;
+    background-color: rgb(34, 228, 20);
+    display: inline-block;
+}
+
+
+.milieu {
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    overflow: auto; 
+    text-align: center;
+
+}
+
+.milieu:hover {
+
+    background-color: black;
+    color: white;
+}
+
+.droite {
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    overflow: auto;
+
+}
+
+.voiture,
+.mustang {
+    width: 100%;
+    height: 100%;
+}
+
+
+.logo {
+    display: inline-block;
+    width: 100%;
+
+}
+
+.logo img {
+
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+}
+
+
+.text {
+
+    vertical-align: text-bottom;
+}
+
+.super,
+.car {
+    font-size: 64px;
+    text-transform: uppercase;
+    display: inline-block;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-top: 50%;
+
+}
+
+.texte-gauche {
+    position: absolute;
+    background-color: #000000;
+    overflow: hidden;
+    height: 100%;
+    width: 40%;
+    inset: 0;
+    opacity: 0;
+    transition: .5s ease;
+
+}
+
+.texte-gauche:hover {
+    width: 40%;
+    opacity: 80%;
+}
+
+.texte-gauche p {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+
+
+
+.texte-droite {
+    position: absolute;
+    background-color: #000000;
+    overflow: hidden;
+    height: 100%;
+    width: 40%;
+    inset: 0 0 0 60%;
+    opacity: 0;
+    transition: .5s ease;
+
+}
+
+.texte-droite:hover {
+    width: 40%;
+    opacity: 80%;
+}
+
+.texte-droite p {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    right: 0%;
+    bottom: 0;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+/* FIN ACCUEIL */

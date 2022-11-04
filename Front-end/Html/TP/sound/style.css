@@ -1,0 +1,328 @@
+/* Import de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* REGLAGES GENERAUX */
+*{
+
+padding: 0;
+margin: 0;
+
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+
+/* FIN REGLAGES GENERAUX */ 
+
+/* ACCUEIL */ 
+
+.container{ /* CONTAINEUR GLOBAL CONTENANT LES 3 BLOCS */
+    width: 100%;
+    height: 715px;
+    background-color: aqua;
+    font-size: 0; /* Permet de supprimer l'écart entre les blocs du au inline-block */
+}
+
+.gauche{
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+}
+
+
+.milieu{
+    width: 20%; 
+    height: 100%;
+    background-color: #FFD600;
+    display: inline-block;
+    overflow: auto ; /* Permet de faire remonter le bloc suite à l'ajout d'une img */
+    text-align: center;
+
+}
+
+.milieu:hover{
+
+    background-color: black;
+    color: white;
+}
+
+.droite{
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    overflow: auto;
+   
+}
+
+.burger, .menu-fish{ /* Je donne la même instruction à plusieurs class */
+    width: 100%;
+    height: 100%;
+}
+
+
+.logo{
+    display: inline-block;
+    width: 100%;
+
+}
+
+.logo img{
+
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+.text{
+
+  vertical-align: text-bottom;
+}
+
+.meat, .fish{
+    font-size: 64px;
+    text-transform: uppercase;
+    display: inline-block;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-top: 50%;
+
+}
+
+.texte-gauche{
+    position: absolute;
+    background-color: #000000;
+    overflow: hidden;
+    height: 100%;
+    width: 40%;
+    inset: 0;
+    opacity: 0;
+    transition: .5s ease;
+
+}
+
+.texte-gauche:hover {
+    width: 40%;
+    opacity: 50%;
+}
+
+.texte-gauche p{
+position: absolute;
+left: 25%;
+top: 50%;
+right: 0;
+bottom: 0;
+font-size: 32px;
+color: #FFFFFF;
+}
+
+
+
+
+.texte-droite{
+    position: absolute;
+    background-color: #000000;
+    overflow: hidden;
+    height: 100%;
+    width: 40%;
+    inset: 0 0 0 60%;
+    opacity: 0;
+    transition: .5s ease;
+
+}
+
+.texte-droite:hover {
+    width: 40%;
+    opacity: 50%;
+}
+
+.texte-droite p{
+position: absolute;
+left: 35%;
+top: 50%;
+right: 0%;
+bottom: 0;
+font-size: 32px;
+color: #FFFFFF;
+}
+
+/* FIN ACCUEIL */
+
+/* À propos */
+
+
+.a-propos:hover{
+
+   color: #FFD600;
+}
+
+.titre-a-propos{
+    color: white;
+    display: inline-block;
+    font-size: 32px;
+    overflow: auto;
+    padding-top: 20%;
+    letter-spacing: 5px;
+  
+   
+}
+.texte-titre{
+
+    text-align: center;
+   
+}
+
+hr{
+    width: 15%;
+    color: white;
+    margin: 65px auto;
+    padding: 0;
+}
+
+h2{
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.guillemets{
+    font-size: 64px;
+    color: white;
+   font-style:oblique;
+   padding-top:30px;
+}
+
+.texte-a-propos, .signature{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.signature{
+    margin-top: 30px;
+    font-style: italic;
+}
+
+
+.btn-a-propos{
+
+    width: 30%;
+    border-radius: 30px;
+    border: 2px solid white;
+    font-size: 16px;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.btn-a-propos:hover{
+
+color: #FFD600;
+border: 2px solid #FFD600;
+cursor: pointer;
+
+}
+
+
+.btn-a-propos a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+/* FIN A PROPOS */
+
+/* CONTACT */
+
+.background{
+   
+    background: url("photo_fond2.jpeg");
+    background-size: cover;
+    
+   
+}
+
+.logo-img{
+    width: 50%;
+    height: 130px;
+    margin: 0 auto;
+}
+
+form{
+    width: 40%;
+    height: 620px;
+    margin: 0 auto;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #FFFFFF50;
+   
+    
+}
+.en-tete{
+width: 100%;
+height: 170px;
+background:url(/photo_fond.jpeg);
+background-size: cover;
+background-position: center;
+border-radius: 30px 30px 0 0 ;
+text-align: center;
+}
+
+.titre-contact{
+    font-weight: bolder;
+}
+
+
+label{
+    display: block;
+    margin-top: 15px;
+}
+
+input{
+    width: 65%;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+textarea{
+    width: 65%;
+    height: 135px;
+    background-color: transparent;
+    border: 1px solid black;
+    resize: none;
+}
+
+.btn-contact{
+
+    font-size: 18px;
+    background-color: transparent;
+    padding: 5px;
+    float: right;
+    margin-right: 105px;
+    
+
+}
+.validation{
+    margin: 0 auto;
+    width: 65%;
+
+}
+.btn-contact:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.formulaire{
+    padding-top:50px;
+    width: 100%;
+    margin: 0 auto;
+}
