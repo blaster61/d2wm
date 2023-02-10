@@ -1,0 +1,7 @@
+<div *ngIf="post" class="m-5">
+    <h3>{{post.title}}</h3>
+    <p>{{post.content}}</p>
+    <p *ngIf="author">by {{author.login}}</p>
+    <p>publication date : {{post.createdAt | date: 'd/M/Y'}}</p>
+    <a routerLink="../../edit/{{post._id}}" *ngIf="user && author && user.userId === author._id">edit</a>
+</div>

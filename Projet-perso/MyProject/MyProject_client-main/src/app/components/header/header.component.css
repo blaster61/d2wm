@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Ewert&display=swap');
+
+
+a {
+  margin-left: 5px;
+  font-family: 'Carter One', cursive;
+}
+
+.container-2 {
+  width: 100%;
+  background: #000;
+}
+
+.menu-2 a {
+  color: #fff;
+  margin: 10px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 1s;
+}
+
+.menu-2 a:hover {
+  background: #ff0037;
+}
+
+.arrow {
+  position: absolute;
+  background: #fff;
+  transform: scale(0);
+  transition: transform 0.3s, top 0.3s, left 0.3s, bottom 0.3s, right 0.3s;
+}
+
+.menu-2 .arrow-1 {
+  top: 0px;
+  left: 0px;
+  height: 10px;
+  width: 2px;
+}
+
+.menu-2 .arrow-2 {
+  top: 0px;
+  left: 0px;
+  height: 2px;
+  width: 10px;
+}
+
+.menu-2 .arrow-3 {
+  bottom: 0px;
+  right: 0px;
+  height: 10px;
+  width: 2px;
+}
+
+.menu-2 .arrow-4 {
+  bottom: 0px;
+  right: 0px;
+  height: 2px;
+  width: 10px;
+}
+
+.menu-2 a:hover .arrow {
+  transform: scale(1);
+  transition: transform 0.8s, top 0.8s, left 0.8s, bottom 0.8s, right 0.8s;
+}
+
+.menu-2 a:hover .arrow-1,
+.menu-2 a:hover .arrow-2 {
+  top: -5px;
+  left: -5px;
+}
+
+.menu-2 a:hover .arrow-3,
+.menu-2 a:hover .arrow-4 {
+  bottom: -5px;
+  right: -5px;
+}
+
+form {
+  height: 40px;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+nav {
+  box-shadow: 0 3px 10px 0;
+}
