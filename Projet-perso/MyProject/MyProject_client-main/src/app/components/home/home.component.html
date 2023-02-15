@@ -1,8 +1,5 @@
-<ul>
-  <li *ngFor="let post of posts"><a routerLink="../post/{{post._id}}">{{post.title}}</a></li>
-</ul>
 
-<!-- <h1>漫 KAWA MANGA 画</h1> -->
+<h1>漫 KAWA MANGA 画</h1>
 <br /><br />
   <div class="container">
 
@@ -19,12 +16,11 @@
           </div>
         </div>  -->
 
-        <div class="card mb-3">
+        <div class="card mb-3" *ngFor="let post of posts">
           <img src="/assets/images/mangaka.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Manga univers</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
+            <h5 class="card-title"><a routerLink="../post/{{post._id}}">{{post.title}}</a></h5>
+            <p class="card-text">{{post.content}}</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
@@ -83,7 +79,7 @@
             <h5>Présentation</h5>
             <hr />
             <div class="ratio ratio-16x9">
-              <iframe src="/assets/images/TOP 10 MEILLEURS ANIMÉS DE TOUS LES TEMPS ! QUE VOUS DEVEZ ABSOLUMENT REGARDER partie 2.mp4" title="YouTube video" allowfullscreen></iframe>
+              <video controls src="/assets/images/TOP 10 MEILLEURS ANIMÉS DE TOUS LES TEMPS ! QUE VOUS DEVEZ ABSOLUMENT REGARDER partie 2.mp4" title="YouTube video" allowfullscreen></video>
             </div>
           </div>
         </div>

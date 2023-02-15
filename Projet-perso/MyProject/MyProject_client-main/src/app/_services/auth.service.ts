@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { User } from '../user';
 
-const AUTH_API = "http://localhost:4000/user/";
+const AUTH_API = "http://localhost:4000/user";
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 }
@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   //cette méthode envoie vers le back une requête ver user/register avec un body qui contient login, email et password. Le back reconnaitra l'url et effectuera la création d'un user.
-  register(login: string, email: string, password: string): Observable<User> {
-    return this.http.post<User>(AUTH_API + "register", {login, email, password}, httpOptions);
+  register(user: User): Observable<User> {
+    return this.http.post<User>(AUTH_API + "/register", user);
   }
 }

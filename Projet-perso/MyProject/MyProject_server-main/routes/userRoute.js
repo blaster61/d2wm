@@ -8,6 +8,7 @@ const auth = require("../middleware/auth")
 
 //création d'un user ou inscription
 router.post("/register", async(req, res)=> {
+    console.log("Test User");
     try {
         const searchUser = await User.findOne({email: req.body.email});
         if(searchUser) {

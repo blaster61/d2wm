@@ -88,3 +88,18 @@ button:hover{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+@media (max-width: 600px) {
+    body{
+		background: #FEE648;
+    }
+	button{
+		
+		background:#E30E24 ;
+	}
+	button:hover{
+		background: #FFC107;	
+	}
+	.main{
+		width: 280px;
+		height: 550px;}
+  }
