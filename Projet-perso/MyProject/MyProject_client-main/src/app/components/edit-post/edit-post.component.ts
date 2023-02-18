@@ -46,7 +46,7 @@ export class EditPostComponent {
     }
     this.id = String(this.route.snapshot.paramMap.get('id'));
     this.getPost(this.id);
-    console.log("logged user: ", this.user);
+    console.log("Utilisateur connecté: ", this.user);
   }
 
   //cette méthode permet de récupérer un post par son id grâce au PostService et lance aussi la récupération de l'auteur avec getAuthor() (voire plus bas). Les informations récupérées sont stockées dans this.form

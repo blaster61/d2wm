@@ -18,6 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ArticlesComponent } from './component/articles/articles.component';
 import { CategoryComponent } from './component/category/category.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { CGUComponent } from './component/cgu/cgu.component';
+import { RgpdComponent } from './component/rgpd/rgpd.component';
 
 
 
@@ -37,7 +39,9 @@ import { ContactComponent } from './component/contact/contact.component';
     FooterComponent,
     ArticlesComponent,
     CategoryComponent,
-    ContactComponent
+    ContactComponent,
+    CGUComponent,
+    RgpdComponent
   ],
   imports: [
     BrowserModule,

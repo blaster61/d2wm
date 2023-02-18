@@ -28,7 +28,7 @@ form!: FormGroup;
   // //errorMessage stockera un message d'erreur éventuel
   // errorMessage = '';
 
-  constructor(private authService: AuthService, private formBuilder: FormBuilder, private route: ActivatedRoute) {}
+  constructor(private authService: AuthService, private formBuilder: FormBuilder) {}
 
   //quand on soumet le formulaire, une requête est envoyée vers le back, grâce à AuthService : le body de cette requête contient un login, un email et un password. Si le back prend l'inscription, il retournera un message dans ce sens, sinon, un message d'erreur.
   onSubmit(): void {

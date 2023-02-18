@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { User } from 'src/app/user';
 import { AuthService } from 'src/app/_services/auth.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
@@ -8,12 +10,14 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  formLogin!: FormGroup;
   //on définit ici les variables nécessaires
   //form stockera les valeurs entrées dans les champs du formulaire
-  form: any = {
-    email: null,
-    password: null
-  }
+  // form: any = {
+  //   email: null,
+  //   password: null
+  // }
   //isLoggedIn dira si un user est connecté grâce au token récupéré dans sessionStorage
   isLoggedIn = false;
   //isLoginFailed dira si le login a échoué
@@ -25,10 +29,11 @@ export class LoginComponent {
   //user stockera les informations du user connecté récupérées dans le sessionStorage
   user: any = {};
 
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService) {}
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private formBuilder: FormBuilder) {}
 
   //au chargement, on définit les valeurs de chaque variable définie plus haut
   ngOnInit(): void {
+    this.initLogin();
     if(this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.admin = this.tokenStorage.getUser().admin
@@ -38,9 +43,12 @@ export class LoginComponent {
 
   //quand le formulaire est soumis, grâce à AuthService, on envoie une requête vers le back qui contient dans son body un email et un password. On récupère un token et les informations du user qui tente de se connecter si tout va bien, sinon, un message d'erreur
   onSubmit(): void {
-    const { email, password } = this.form;
+   const user: User = {
+    email: this.userData['email'].value,
+    password: this.userData['password'].value
+   }
 
-    this.authService.login(email, password).subscribe(
+    this.authService.login(user).subscribe(
       data => {
         console.log(data);
         this.tokenStorage.saveToken(data.message.token);
@@ -56,5 +64,19 @@ export class LoginComponent {
         this.isLoginFailed = true;
       }
     )
+  }
+
+
+private initLogin(){
+  // Init du form à vide
+
+  this.formLogin = this.formBuilder.group({
+    email: [""],
+    password: [""]
+  })
+}
+
+  get userData(){
+    return this.formLogin.controls
   }
 }

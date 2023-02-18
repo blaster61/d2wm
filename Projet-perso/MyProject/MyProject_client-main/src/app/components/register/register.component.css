@@ -100,7 +100,7 @@ section .container .user .formBx form input[type="submit"] {
 }
 
 section .container .user .formBx form input[type="submit"]:hover {
-    background: #FEE648;
+    background: #38ACEC;
 }
 
 section .container .user .formBx form .signup {

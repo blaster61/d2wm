@@ -2,7 +2,7 @@
     <div class="card card-container">
     <!-- on affichera le formulaire que si l'utilisateur est connecté et a le status admin -->
       <form
-        *ngIf="admin"
+        
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
         #f="ngForm"
@@ -10,7 +10,7 @@
         class="m-5"
       >
         <div class="form-group">
-          <label for="title">title</label>
+          <label for="title">Titre</label>
           <input
             type="text"
             class="form-control"
@@ -22,17 +22,17 @@
             #title="ngModel"
           />
           <div class="alert-danger" *ngIf="title.errors && f.submitted">
-            <div *ngIf="title.errors['required']">title is required</div>
+            <div *ngIf="title.errors['required']">Le titre est requis</div>
             <div *ngIf="title.errors['minlength']">
-              title must be at least 3 characters
+             Le titre doit avoir au moins 3 caractères
             </div>
             <div *ngIf="title.errors['maxlength']">
-              title must be at most 20 characters
+              Maximum 20 caractères pour le titre
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="content">content</label>
+          <label for="content">Contenu</label>
           <textarea
             type="content"
             class="form-control"
@@ -43,23 +43,23 @@
             #content="ngModel"
           ></textarea>
           <div class="alert-danger" *ngIf="content.errors && f.submitted">
-            <div *ngIf="content.errors['required']">content is required</div>
+            <div *ngIf="content.errors['required']">Veuillez insérer un contenu</div>
             <div *ngIf="content.errors['content']">
               content must be a valid content address
             </div>
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block m-2">Publish</button>
+          <button class="btn btn-primary btn-block m-2">Publier</button>
         </div>
   
         <div class="alert alert-warning" *ngIf="f.submitted && !isPublished">
-          Publication failed!<br />{{ errorMessage }}
+          La publication a échoué<br />{{ errorMessage }}
         </div>
       </form>
   
       <div class="alert alert-success" *ngIf="isPublished">
-        Your post has been published !
+        Votre article a été posté!
       </div>
     </div>
   </div>

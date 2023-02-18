@@ -33,6 +33,7 @@ export class CreatePostComponent {
       this.admin = true;
       this.author = this.tokenStorage.getUser().userId;
     }
+    this.author = this.tokenStorage.getUser().userId;
   }
 
   //quand le formulaire est soumis, on sollicite la méthode createPost() de PostService à laquelle on donne en arguments les valeurs récupérées dans les champs title et content du formulaire. L'argument author est renseigné grâce à la propriété author du composant renseignée dans ngOnInit() (voire ci-dessus)
