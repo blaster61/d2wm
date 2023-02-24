@@ -12,6 +12,8 @@ import { EditUserComponent } from '../components/edit-user/edit-user.component';
 import { ArticlesComponent } from '../component/articles/articles.component';
 import { CategoryComponent } from '../component/category/category.component';
 import { ContactComponent } from '../component/contact/contact.component';
+import { RgpdComponent } from '../component/rgpd/rgpd.component';
+import { CGUComponent } from '../component/cgu/cgu.component';
 
 //on met les différentes routes en place ici
 const routes: Routes = [
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: "articles", component: ArticlesComponent },
   { path: "category", component: CategoryComponent },
   { path: "contact", component: ContactComponent },
+  { path: "rgpd", component: RgpdComponent },
+  { path: "CGU", component: CGUComponent },
 ]
 
 @NgModule({

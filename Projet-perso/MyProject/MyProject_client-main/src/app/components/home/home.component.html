@@ -1,23 +1,15 @@
 
-<!-- <h1>漫 KAWA MANGA 画</h1> -->
+<h1>漫 KAWA MANGA 画</h1>
 <br /><br />
   <div class="container">
 
     <div class="row">
       <div class="col-md-8">
 
-        <!-- <div class="card mb-3">
-          <!-- <img src="" class="card-img-top" alt="..."> -->
-          <!-- <div class="card-body">
-            <h5 class="card-title">Manga univers</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>  -->
+        
 
         <div class="card mb-3" *ngFor="let post of posts">
-          <img src="/assets/images/mangaka.jpg" class="card-img-top" alt="...">
+          <img src="/assets/images/mangaka.jpg" class="card-img-top" alt="image manga">
           <div class="card-body">
             <h5 class="card-title"><a routerLink="../post/{{post._id}}">{{post.title}}</a></h5>
             <p class="card-text">{{post.content}}</p>
@@ -26,7 +18,7 @@
         </div>
 
         <div class="card mb-3">
-          <img src="/assets/images/manga-club.jpg" class="card-img-top" alt="...">
+          <img src="/assets/images/manga-club.jpg" class="card-img-top" alt="picture">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -35,7 +27,7 @@
           </div>
         </div>
         <div class="card mb-3">
-          <img src="/assets/images/manga-noir2.jpg" class="card-img-top" alt="...">
+          <img src="/assets/images/manga-noir2.jpg" class="card-img-top" alt="image anime">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -67,7 +59,7 @@
         <br />
         <div class="card">
           <div class="card-body">
-            <img src="/assets/images/naruto.png" class="card-img-top" alt="...">
+            <img src="/assets/images/naruto.png" class="card-img-top" alt="img">
           </div>
         </div>
 

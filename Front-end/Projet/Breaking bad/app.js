@@ -1,6 +1,6 @@
 const character = document.querySelector("#character");
 const circle = document.querySelector("circle");
-let urlAPI = 'https://breakingbadapi.com/api/characters';
+let urlAPI = 'https://www.breakingbadapi.com/api/characters/';
 let url = document.location.href;
 console.log(url);
 if(url === "http://127.0.0.1:5500/"){

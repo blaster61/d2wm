@@ -7,6 +7,9 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+const helmet = require("helmet");
+app.use(helmet());
+
 const MONGO_URI = process.env.MONGO_URI;
 mongoose
 .set('strictQuery', false)
