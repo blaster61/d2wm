@@ -11,9 +11,8 @@ const helmet = require("helmet");
 app.use(helmet());
 
 const MONGO_URI = process.env.MONGO_URI;
-mongoose
-.set('strictQuery', false)
-.connect(MONGO_URI)
+mongoose.set('strictQuery', false)
+mongoose.connect(MONGO_URI)
 .then(()=>console.log("La connexion à la BDD est établie"))
 .catch((error) => console.log(error))
 

@@ -20,6 +20,24 @@ import { CategoryComponent } from './component/category/category.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { CGUComponent } from './component/cgu/cgu.component';
 import { RgpdComponent } from './component/rgpd/rgpd.component';
+import { CookieService } from 'ngx-cookie-service';
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
+
+const cookieConfig:NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'localhost'  
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: '#f1d600'
+    }
+  },
+  theme: 'edgeless',
+  type: 'opt-out'
+};
 
 
 
@@ -41,7 +59,8 @@ import { RgpdComponent } from './component/rgpd/rgpd.component';
     CategoryComponent,
     ContactComponent,
     CGUComponent,
-    RgpdComponent
+    RgpdComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -49,9 +68,10 @@ import { RgpdComponent } from './component/rgpd/rgpd.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    NgcCookieConsentModule.forRoot(cookieConfig),
     
   ],
-  providers: [AuthInterceptorProviders],
+  providers: [AuthInterceptorProviders,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
