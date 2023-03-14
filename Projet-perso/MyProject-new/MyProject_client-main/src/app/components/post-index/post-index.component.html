@@ -1,0 +1,36 @@
+<div *ngIf="admin else elseBlock">
+    <h2>Liste des articles</h2>
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Auteur</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Contenu</th>
+            <th scope="col">Date de publication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts">
+            <th scope="row">{{post.count}}</th>
+           
+                <td >{{post.author.login}}</td>
+                <td><a routerLink="../post/{{post._id}}">{{post.title}}</a></td>
+                <td>{{post.content.substring(0,40)}}...</td>
+                <td>{{post.createdAt}}</td>
+                <td><a routerLink="../edit/{{post._id}}"><i class="bi bi-pencil-square" title="Editer"></i></a> | <i (click)="deletePost(post._id)" class="bi bi-trash" title="Supprimer"></i></td>
+              
+            
+          </tr>
+        
+        </tbody>
+      </table>
+        <div class="alert alert-success" *ngIf="isDelete">
+                   L'utilisateur a bien été supprimé
+                  </div>
+    
+    </div>
+    <ng-template #elseBlock>
+        <div class="alert alert-danger">Tu n'es pas administrateur</div>
+    </ng-template>

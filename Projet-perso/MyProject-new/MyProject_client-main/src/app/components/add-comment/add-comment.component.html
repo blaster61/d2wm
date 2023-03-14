@@ -1,0 +1,32 @@
+<div class="col-md-12" >
+    <div class="card card-container" *ngIf="isLogged">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="m-5">
+            <div class="form-group">
+                <label for="comment">Commentaire</label>
+                <input type="text" class="form-control" name="comment" [(ngModel)]="form.comment" required comment minlength="3"
+                maxlength="250" #comment="ngModel" />
+                <div class="alert-danger" *ngIf="comment.errors && f.submitted">
+                    <div *ngIf="comment.errors['required']">Le commentaire est requis</div>
+                    <div *ngIf="comment.errors['minlength']">
+                      Le commentaire doit avoir au moins 3 caractères
+                    </div>
+                    <div *ngIf="comment.errors['maxlength']">
+                      Maximum 250 caractères pour le commentaire
+                    </div>
+                  </div><br>
+                <button class="btn btn-outline-success">Soumettre</button>
+            </div>        
+
+        </form>
+
+        <div class="alert alert-warning" *ngIf="f.submitted && !isPublished">
+            La publication a échoué<br />{{ errorMessage }}
+          </div>
+          <div class="alert alert-success" *ngIf="isPublished">
+            Votre commentaire a été posté!
+          </div>
+    </div>
+    <div class="alert alert-warning" *ngIf="!isLogged">
+        Veuillez vous connecter pour poster un commentaire<br />
+       </div>
+</div>

@@ -20,23 +20,41 @@ import { CategoryComponent } from './component/category/category.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { CGUComponent } from './component/cgu/cgu.component';
 import { RgpdComponent } from './component/rgpd/rgpd.component';
-import { CookieService } from 'ngx-cookie-service';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
+
+
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
-    domain: 'localhost'  
+    domain: 'localhost'
   },
-  palette: {
-    popup: {
-      background: '#000'
+
+  "position": "bottom",
+  "theme": "classic",
+  "palette": {
+    "popup": {
+      "background": "#000000",
+      "text": "#ffffff",
+      "link": "#ffffff"
     },
-    button: {
-      background: '#f1d600'
+    "button": {
+      "background": "#f1d600",
+      "text": "#000000",
+      "border": "transparent"
     }
+  
   },
-  theme: 'edgeless',
-  type: 'opt-out'
+  "type": "opt-out",
+  "content": {
+    "message": "Ce site web utilise des cookies pour vous assurer la meilleure expérience de navigation sur notre site.",
+    "dismiss": "OK, j'ai compris!",
+    "deny": "Refuser",
+    "link": "Plus d'information  ",
+    "href": "rgpd",
+    "policy": " Politiques des cookies ",
+    "header": "Cookies sur le site!",
+    "allow": "Autoriser les cookies"
+  }
 };
 
 
@@ -60,6 +78,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     ContactComponent,
     CGUComponent,
     RgpdComponent,
+    
+    
   
   ],
   imports: [
@@ -71,7 +91,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     NgcCookieConsentModule.forRoot(cookieConfig),
     
   ],
-  providers: [AuthInterceptorProviders,CookieService],
+  providers: [AuthInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,9 +2,30 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/Post");
 const auth = require("../middleware/auth")
+const multer = require('../middleware/multer');
+const path = require('path');
+const app = express();
+
+
+app.use('/images/', express.static(path.join(__dirname, 'images')));
+exports.createThing = (req, res, next) => {
+    const thingObject = JSON.parse(req.body.thing);
+    delete thingObject._id;
+    delete thingObject._userId;
+    const thing = new Thing({
+        ...thingObject,
+        userId: req.auth.userId,
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+    });
+  
+    thing.save()
+    .then(() => { res.status(201).json({message: 'Objet enregistré !'})})
+    .catch(error => { res.status(400).json( { error })})
+ };
+
 
 //création d'un post
-router.post("/new", auth, async(req, res)=> {
+router.post("/new", auth,multer, async(req, res)=> {
     try {
         //on stocke les valeurs récupérées dans le body de la reqsuête, envoyées depuis le front, dans un objet de type Post
         const post = new Post(req.body);

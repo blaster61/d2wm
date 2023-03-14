@@ -4,6 +4,19 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const auth = require("../middleware/auth")
+const ControlEmail = require('../middleware/ControlEmail');
+const app = express();
+
+
+// Utiliser le middleware ControlEmail
+app.post('/User.js', ControlEmail, (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  // Le traitement de la requête continue ici si la validation est réussie
+});
 
 
 //création d'un user ou inscription

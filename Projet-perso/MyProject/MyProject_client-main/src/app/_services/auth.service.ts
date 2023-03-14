@@ -3,6 +3,17 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { User } from '../user';
 
+// // Définir la regex pour valider le mot de passe
+// const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+// // Vérifier si le mot de passe est valide
+// if (passwordRegex.test(password)) {
+//   // Mot de passe valide
+// } else {
+//   // Mot de passe invalide
+// }
+
+
 const AUTH_API = "http://localhost:4000/user";
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})

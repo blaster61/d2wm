@@ -1,0 +1,27 @@
+
+<div *ngFor="let comment of comments" class="container d-flex justify-content-center align-items-center height-vh">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8">
+        <div class="d-flex flex-column" id="comment-container">
+          <div class="bg-white">
+            <div class="flex-row d-flex">
+              <img src="{{comment.image}}" width="40" class="rounded-circle m-2">
+              <div class="d-flex flex-column justify-content-start ml-2">
+                <span class="d-block font-weight-bold name">{{comment.login}}</span>
+                <span class="date text-black-50">Publié le  {{comment.date |  date: 'dd/MM/Y H:mm'}}</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <p class="comment-text">{{comment.comment}}</p>
+            </div>
+          </div>
+          <div class="bg-white">
+            <div class="d-flex flex-row fs-14" *ngIf="comment.login === user.login  || isAdmin">
+             
+              <div (click)="deleteComment(comment._id)"class="p-2 cursor p-2 btn btn-danger editBtn"><span class="ml-1">Supprimer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

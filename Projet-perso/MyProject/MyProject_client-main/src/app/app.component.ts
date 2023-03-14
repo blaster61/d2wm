@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import {  NgcCookieConsentService  }  from 'ngx-cookieconsent' ;
+import { CookieService } from 'ng2-cookies';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +17,6 @@ export class AppComponent {
 ngOnInit(){
    this.ngCookieService.init(this.ngCookieService.getConfig())
 }
+
 }
+

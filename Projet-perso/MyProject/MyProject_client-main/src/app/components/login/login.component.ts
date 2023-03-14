@@ -40,6 +40,7 @@ export class LoginComponent {
       this.user = this.tokenStorage.getUser()
     }
   }
+  
 
   //quand le formulaire est soumis, grâce à AuthService, on envoie une requête vers le back qui contient dans son body un email et un password. On récupère un token et les informations du user qui tente de se connecter si tout va bien, sinon, un message d'erreur
   onSubmit(): void {

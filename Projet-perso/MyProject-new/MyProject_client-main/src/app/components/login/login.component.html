@@ -1,0 +1,16 @@
+<body>
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup">
+      <form [formGroup]="formLogin">
+        <label for="chk" aria-hidden="true">Connexion</label>
+        <input type="text" formControlName="email" placeholder="Email" required="">
+        <input type="password" formControlName="password" placeholder="Mot de passe" required="">
+        <button (click)="onSubmit()">Connexion</button>
+      </form>
+    </div>
+
+
+  </div>
+</body>

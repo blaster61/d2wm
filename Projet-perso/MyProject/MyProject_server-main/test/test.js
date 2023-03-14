@@ -1,13 +1,19 @@
-const Post = require('../models/Post');
+const User = require('../models/User');
 const assert = require('assert');
+const mongoose = require("mongoose");
 
-describe(' crud  post', () => {
-    it('Post créé et trouvé', () => {
-        const test =  new Post({
-            author: 'testpost',
-            title: 'testpost',
-            content: 'testpost',
-            
+mongoose.set("strictQuery", false);
+mongoose.connect('mongodb://localhost:27017/test')
+    .then(() => console.log("La connexion à la BDD a été établie."))
+    .catch((error) => console.log(error))
+
+describe(' crud  user', () => {
+    it('user créé et trouvé', () => {
+        const test =  new User({
+            login: 'testlogin',
+            email: 'testemail',
+            password: 'testpassword',
+            isAdmin: 'testisAdmin',
         });
         console.log(test);
          test.save().then(() => {
@@ -15,12 +21,11 @@ describe(' crud  post', () => {
             done();
          })
     })
-    it('Post effacé et non trouvé'), done => {
-        Post.findByIdAndDelete({title: "testpost"})
-        .then(() => Post.findOne({title: "testpost"}))
-        .then(Post => {
-            assert(Post === null);
-            done();
-        });
+    it("user effacé et non trouvé", () => {
+        const find = User.findOneAndDelete({ title: 'testuser' }).lean()
+        find.then(() => {
+            assert(find.title === 'testuser')
+        })
+    })
     }
-})
+)

@@ -1,0 +1,50 @@
+a {
+    color: #dfe609;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  
+a:hover {
+    text-decoration: underline;
+  }
+  
+
+.to-top {
+    color: #E30E24;
+    padding-top: 1.8em;
+    display: inline-flex;
+    position: fixed;
+    border-color: #E30E24;
+    text-decoration: none;
+    transition: all .3s ease-out;
+
+    z-index: 99;
+    bottom: 60px;
+    right: 15px;
+
+}
+
+.to-top:before {
+    content: '▲';
+    font-size: .9em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.7em;
+    border: solid .13em #E30E24;
+    border-radius: 10em;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.3em;
+    border-color: inherit;
+    transition: transform .5s ease-in;
+}
+
+.to-top:hover {
+    color: #E30E24;
+    border-color: #E30E24;
+}
+
+.to-top:hover:before {
+    transform: rotate(360deg);
+}
